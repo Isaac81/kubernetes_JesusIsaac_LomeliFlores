@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: apikubernetes
-        image: caasi81/apikubernetes:latest
+        image: caasi81/apikubernetes:v1
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
