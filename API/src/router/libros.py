@@ -16,3 +16,14 @@ async def obtener_libros():
 async def obtener_libro(id: int):
     lista = retornoDatos()
     return lista[id - 1]
+
+
+@router.get('/unidades/{unidades}')
+async def obtener_libro(unidades: float):
+    lista = retornoDatos()
+    coincidentes = []
+    for i in lista:
+        if i["unidades"] <= unidades:
+            coincidentes.append(i)
+    return coincidentes
+
